@@ -18,7 +18,7 @@ WHERE status=:status
 AND ('$dateTime' BETWEEN start_time AND end_time)
 AND (zone='' OR zone=:zone)
 AND (channel='' OR channel=:channel)
-ORDER BY sort DESC, id DESC";
+ORDER BY sort";
         $bind = array('status' => 1, 'zone' => $zone, 'channel' => $channel);
         $query = DI::getDefault()->get('dbData')->query($sql, $bind);
         $query->setFetchMode(Db::FETCH_ASSOC);

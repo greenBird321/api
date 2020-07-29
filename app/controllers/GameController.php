@@ -20,10 +20,10 @@ class GameController extends ControllerBase
         $this->gameModel = new Game();
     }
 
-    // todo url http://domin/game/status?account_id=1234&role_id=4444&device=555555&level_id=6-1
+    // todo url http://domin/game/stats?account_id=1234&role_id=4444&device=555555&level_id=6-1
     // 查询语句 SELECT COUNT(DISTINCT account_id) as count, level_id FROM users_level GROUP BY level_id
-    // 统计打点
-    public function statusAction()
+    // 统计关卡打点
+    public function statsAction()
     {
         $accountId = $this->request->get("account_id");
         $roleId = $this->request->get("role_id");
