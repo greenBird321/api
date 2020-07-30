@@ -1,0 +1,38 @@
+setting:
+    sandbox         : true
+    request_log     : false
+    sql_log         : false
+    timezone        : PRC
+    tz_output       : PRC
+    cache_time      : 600
+    security_plugin : 0
+    secret_key      : xxxxxxxxxxxxxxxx
+    app_id          :
+
+db_data:
+    adapter     : Mysql
+    host        : 127.0.0.1
+    port        : 3306
+    username    : root
+    password    : root
+    dbname      : v3-rpc
+    charset     : utf8mb4
+
+db_log:
+    adapter     : Mysql
+    host        : 127.0.0.1
+    port        : 3306
+    username    : root
+    password    : root
+    dbname      : v3_logs
+    charset     : utf8mb4
+
+redis:
+    host        : 127.0.0.1
+    port        : 6379
+    index       : 1
+    prefix      : cache_
+
+api:
+  rpc_protocol  : http
+  rpc_host      : http://v3-rpc.com
